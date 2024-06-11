@@ -1,14 +1,23 @@
-# PIPEX
+# pipex
 
-## Use
-Create an infile, run make, and process the folowing <infile "ls -l" "wc -l" outfile>
-Bonus : make bonus => run : <./pipex file1 cmd1 cmd2 cmd3 ... cmdn file2> OR <./pipex here_doc LIMITER cmd cmd1 file>
+`pipex` is a project in the 42 curriculum that involves replicating the functionality of shell pipelines. This project helps you understand inter-process communication, system calls, and the use of pipes in Unix-like operating systems.
 
-## Principle
-Create pipes for to allow to process to communicate.
-Create forks to create multiple process.
-Duplicate infile as input, duplicate pipe write end as output, execute command IN child process.
-Duplicate pipe read end as input, duplicate outfile as output, execute cmmand IN parent process.
+## Overview
 
-## Documentation
-https://stackoverflow.com/questions/8860895/how-do-you-use-dup2-and-fork-together
+`pipex` is designed to simulate the behavior of shell pipelines, enabling the redirection of the output of one program to the input of another. This project covers important concepts such as process creation, file descriptors, and the use of the `pipe` and `exec` family of functions.
+
+## Features
+
+- **Input and Output Redirection:** Implement input and output redirection using file descriptors.
+- **Pipe Creation:** Create and manage pipes to connect the output of one process to the input of another.
+- **Process Creation:** Use `fork` to create child processes and `exec` to replace the process image.
+- **Error Handling:** Properly handle errors and edge cases, ensuring robust and reliable behavior.
+
+## Getting Started
+
+To get started with `pipex`, clone the repository and compile the program using the provided Makefile:
+
+```bash
+git clone https://github.com/BenjaminLarger/pipex.git
+cd pipex
+make
