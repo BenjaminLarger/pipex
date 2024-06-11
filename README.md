@@ -21,3 +21,4 @@ To get started with `pipex`, clone the repository and compile the program using 
 git clone https://github.com/BenjaminLarger/pipex.git
 cd pipex
 make
+./pipex
